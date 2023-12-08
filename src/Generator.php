@@ -451,7 +451,7 @@ use Faker\Container\ContainerInterface;
  *
  * @property string $firstName
  *
- * @method string firstName($gender = null)
+ * @method string firstName(?string $gender = null)
  *
  * @property string $firstNameMale
  *
@@ -463,7 +463,7 @@ use Faker\Container\ContainerInterface;
  *
  * @property string $lastName
  *
- * @method string lastName()
+ * @method string lastName(?string $gender = null)
  *
  * @property string $title
  *
@@ -741,7 +741,8 @@ class Generator
     public function parse($string)
     {
         $callback = function ($matches) {
-            return $this->format($matches[1]);
+            $format = $this->format($matches[1]);
+            return $format;
         };
 
         return preg_replace_callback('/{{\s?(\w+|[\w\\\]+->\w+?)\s?}}/u', $callback, $string);
