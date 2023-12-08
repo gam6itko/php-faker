@@ -552,6 +552,8 @@ use Faker\Container\ContainerInterface;
  * @property string $uuid
  *
  * @method string uuid()
+ * @method string animal()
+ * @method string adjectiveAnimal()
  */
 class Generator
 {
