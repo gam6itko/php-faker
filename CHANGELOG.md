@@ -2,6 +2,7 @@
 
 ## [Unreleased](https://github.com/FakerPHP/Faker/compare/v1.23.0...main)
 
+- Add Animal provider it allows to generate random animal like `cat` and adjectiveAnimal like `awesome cat` (#834)
 - Fixed polish license plates (#685)
 - Removed legacy autoloader (#762)
 - Removed functionality for populating ORM entities and models (#764)
